@@ -1,0 +1,21 @@
+﻿@model List<Airlines.Domain.Models.Invoices>
+@{
+    ViewBag.Title = "index";
+}
+<table class="table">
+    <tr>
+        <td>PlaneRegistration</td>
+        <td>Dni</td>
+        <td>FlightDate</td>
+        <td>Cost</td>
+    </tr>
+    @foreach (var p in Model)
+    {
+        <tr>
+            <td>@p.PlaneRegistration</td>
+            <td>@p.Dni</td>
+            <td>@p.FlightDate</td>
+            <td>@p.Cost</td>
+        </tr>
+    }
+</table>
