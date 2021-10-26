@@ -159,6 +159,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\InvoicesController.cs" />
     <Compile Include="Controllers\PassengerController.cs" />
+    <Compile Include="Controllers\PlaneController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -203,6 +204,7 @@
     <Content Include="Views\Airline\index.cshtml" />
     <Content Include="Views\Invoices\index.cshtml" />
     <Content Include="Views\Passenger\index.cshtml" />
+    <Content Include="Views\Plane\index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

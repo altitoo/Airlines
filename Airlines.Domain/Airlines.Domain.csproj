@@ -59,6 +59,7 @@
     <Compile Include="Services\IInvoicesService.cs" />
     <Compile Include="Services\IPassengersService.cs" />
     <Compile Include="Services\IAirlineService.cs" />
+    <Compile Include="Services\IPlaneService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -25,7 +25,7 @@ namespace Airlines.Infra.Context
             modelBuilder.Configurations.Add(new AirlineMapping());
             modelBuilder.Configurations.Add(new InvoicesMapping());
             modelBuilder.Configurations.Add(new PassengerMapping());
-            //modelBuilder.Configurations.Add(new PlaneMapping());
+            modelBuilder.Configurations.Add(new PlaneMapping());
 
             base.OnModelCreating(modelBuilder);
         }

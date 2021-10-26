@@ -23,9 +23,11 @@ namespace Airlines.MVC
             builder.RegisterType<AirlineRepository>().As<IAirlinesRepository>();
             builder.RegisterType<PassengerRepository>().As<IPassengerRepository>();
             builder.RegisterType<InvoicesRepository>().As<IInvoicesRepository>();
+            builder.RegisterType<PlaneRepository>().As<IPlaneRepository>();
             builder.RegisterType<AirlineService>().As<IAirlineService>();
             builder.RegisterType<InvoicesService>().As<IInvoicesService>();
             builder.RegisterType<PassengerService>().As<IPassengersService>();
+            builder.RegisterType<PlaneService>().As<IPlaneService>();
 
             var container = builder.Build();
             DependencyResolver.SetResolver(new AutofacDependencyResolver(container));
