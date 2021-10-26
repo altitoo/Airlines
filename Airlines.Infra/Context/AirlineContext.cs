@@ -18,7 +18,7 @@ namespace Airlines.Infra.Context
         public DbSet<Airline> Airlines { get; set; }
         public DbSet<Invoices> Invoices { get; set; }
         public DbSet<Passenger> Passenger { get; set; }
-        //public DbSet<Plane> Plane { get; set; }
+        public DbSet<Plane> Plane { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
