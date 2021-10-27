@@ -1,4 +1,5 @@
 ﻿using Airlines.Domain.Services;
+using Serilog;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,8 +15,17 @@ namespace Airlines.MVC.Controllers
         // GET: Invoices
         public ActionResult Index()
         {
-            var data = _airlineService.GetAll();
-            return View(data);
+            try
+            {
+                var data = _airlineService.GetAll();
+                Log.Debug("Han visitado la pagina de invoices");
+                return View(data);
+            }
+            catch (Exception)
+            {
+                Log.Information("Fallo en el servicio de aerolineas");
+            }
+            return View();
         }
     }
 }

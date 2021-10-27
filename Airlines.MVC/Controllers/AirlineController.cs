@@ -1,4 +1,6 @@
-﻿using Airlines.Domain.Services;
+﻿using Airlines.Domain.Models;
+using Airlines.Domain.Services;
+using Airlines.MVC.App_Start;
 using Serilog;
 using ServiceLibrary;
 using System;
@@ -20,9 +22,28 @@ namespace Airlines.MVC.Controllers
 
         public ActionResult Index()
         {
-            Log.Information("Se ha visitado la pagina de aerolineas");
-            var data = _airlineService.GetAll();
-            return View(data);
+            var res = Executer.ExecuteAndLog(GetAllAirlines, "Datos");
+            if (res.success)
+                Log.Debug("Han visitado la pagina de aerolineas");
+                Log.Information("Va de locos");
+            {
+                return View(res.data);
+            }
+            return View();
+        }
+
+        private List<Airline> GetAllAirlines()
+        {
+            List<Airline> list = new List<Airline>();
+            try
+            {
+                list = _airlineService.GetAll();
+            }
+            catch (Exception)
+            {
+                Log.Error("Error with airline services");
+            }
+            return list;
         }
     }
 }

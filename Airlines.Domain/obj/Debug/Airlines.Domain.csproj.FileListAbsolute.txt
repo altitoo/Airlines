@@ -10,3 +10,15 @@ C:\Users\avicenteb\source\repos\Airlines\Airlines.Domain\obj\Debug\Airlines.Doma
 C:\Users\avicenteb\source\repos\Airlines\Airlines.Domain\obj\Debug\Airlines.Domain.csproj.CopyComplete
 C:\Users\avicenteb\source\repos\Airlines\Airlines.Domain\obj\Debug\Airlines.Domain.dll
 C:\Users\avicenteb\source\repos\Airlines\Airlines.Domain\obj\Debug\Airlines.Domain.pdb
+C:\Users\avicenteb\Source\Repos\Airlines-1\Airlines.Domain\bin\Debug\Airlines.Domain.dll.config
+C:\Users\avicenteb\Source\Repos\Airlines-1\Airlines.Domain\bin\Debug\Airlines.Domain.dll
+C:\Users\avicenteb\Source\Repos\Airlines-1\Airlines.Domain\bin\Debug\Airlines.Domain.pdb
+C:\Users\avicenteb\Source\Repos\Airlines-1\Airlines.Domain\bin\Debug\EntityFramework.dll
+C:\Users\avicenteb\Source\Repos\Airlines-1\Airlines.Domain\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\avicenteb\Source\Repos\Airlines-1\Airlines.Domain\bin\Debug\EntityFramework.xml
+C:\Users\avicenteb\Source\Repos\Airlines-1\Airlines.Domain\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\avicenteb\Source\Repos\Airlines-1\Airlines.Domain\obj\Debug\Airlines.Domain.csproj.AssemblyReference.cache
+C:\Users\avicenteb\Source\Repos\Airlines-1\Airlines.Domain\obj\Debug\Airlines.Domain.csproj.CoreCompileInputs.cache
+C:\Users\avicenteb\Source\Repos\Airlines-1\Airlines.Domain\obj\Debug\Airlines.Domain.csproj.CopyComplete
+C:\Users\avicenteb\Source\Repos\Airlines-1\Airlines.Domain\obj\Debug\Airlines.Domain.dll
+C:\Users\avicenteb\Source\Repos\Airlines-1\Airlines.Domain\obj\Debug\Airlines.Domain.pdb

@@ -12,15 +12,20 @@ using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
 using Serilog;
+using System.Configuration;
 
 namespace Airlines.MVC
 {
-    public class MvcApplication : System.Web.HttpApplication
+    public class MvcApplication : HttpApplication
     {
         protected void Application_Start()
         {
             Log.Logger = new LoggerConfiguration()
-                .MinimumLevel.Information()
+                .MinimumLevel.Debug()
+                .WriteTo.MSSqlServer(
+                connectionString: ConfigurationManager.ConnectionStrings["Airlines"].ConnectionString,
+                tableName: "Logs",
+                autoCreateSqlTable: true)
                 .WriteTo.File("log.txt", rollingInterval: RollingInterval.Day, rollOnFileSizeLimit: true)
                 .CreateLogger();
 
