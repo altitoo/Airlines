@@ -12,12 +12,12 @@ namespace Airlines.Infra.Context
     {
         public PlaneMapping()
         {
-            Property(i => i.Registration);
+            HasKey(i => i.Registration);
             HasKey(i => i.Mark);
-            Property(i => i.Model);
-            Property(i => i.FabricationYear);
-            Property(i => i.Revisions);
-            Property(i => i.AirlineId);
+            HasKey(i => i.Model);
+            HasKey(i => i.FabricationYear);
+            HasKey(i => i.Revisions);
+            HasKey(i => i.AirlineId);
             ToTable("Plane");
         }
     }

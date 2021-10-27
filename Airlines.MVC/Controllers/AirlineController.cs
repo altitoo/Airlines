@@ -1,4 +1,5 @@
 ﻿using Airlines.Domain.Services;
+using Serilog;
 using ServiceLibrary;
 using System;
 using System.Collections.Generic;
@@ -19,6 +20,7 @@ namespace Airlines.MVC.Controllers
 
         public ActionResult Index()
         {
+            Log.Information("Se ha visitado la pagina de aerolineas");
             var data = _airlineService.GetAll();
             return View(data);
         }

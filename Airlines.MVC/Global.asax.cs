@@ -11,6 +11,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using Serilog;
 
 namespace Airlines.MVC
 {
@@ -18,16 +19,19 @@ namespace Airlines.MVC
     {
         protected void Application_Start()
         {
+            Log.Logger = new LoggerConfiguration()
+                .MinimumLevel.Information()
+                .WriteTo.File("log.txt", rollingInterval: RollingInterval.Day, rollOnFileSizeLimit: true)
+                .CreateLogger();
+
             var builder = new ContainerBuilder();
             builder.RegisterType<AirlineContext>().WithParameter("connectionName", "Airlines");
             builder.RegisterType<AirlineRepository>().As<IAirlinesRepository>();
             builder.RegisterType<PassengerRepository>().As<IPassengerRepository>();
             builder.RegisterType<InvoicesRepository>().As<IInvoicesRepository>();
-            builder.RegisterType<PlaneRepository>().As<IPlaneRepository>();
             builder.RegisterType<AirlineService>().As<IAirlineService>();
             builder.RegisterType<InvoicesService>().As<IInvoicesService>();
             builder.RegisterType<PassengerService>().As<IPassengersService>();
-            builder.RegisterType<PlaneService>().As<IPlaneService>();
 
             var container = builder.Build();
             DependencyResolver.SetResolver(new AutofacDependencyResolver(container));

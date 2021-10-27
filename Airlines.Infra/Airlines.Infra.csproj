@@ -63,9 +63,7 @@
     <Compile Include="Repositories\IInvoicesRepository.cs" />
     <Compile Include="Repositories\IPassengerRepository.cs" />
     <Compile Include="Repositories\InvoicesRepository.cs" />
-    <Compile Include="Repositories\IPlaneRepository.cs" />
     <Compile Include="Repositories\PassengerRepository.cs" />
-    <Compile Include="Repositories\PlaneRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Interfaces\" />
